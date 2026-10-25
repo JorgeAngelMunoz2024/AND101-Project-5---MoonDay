@@ -41,7 +41,7 @@ Here's a video / GIF that demos all of the app's implemented features:
 
 ![Video Demo](Peek%202026-10-24%2020-10.gif)
 
-GIF created with **ScreenToGif**
+GIF created with **Peek**
 
 ## Notes
 
