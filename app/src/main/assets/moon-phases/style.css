@@ -1,0 +1,136 @@
+html, body {
+  min-height: 100%;
+  margin: 0;
+  background: #17181c;
+  color: #e8e8ea;
+  font-family: system-ui, sans-serif;
+}
+
+:root {
+  /* how long the outgoing frame holds, fully static, before the next frame
+     starts growing on top of it — override per demo via inline style */
+  --hold-duration: 0.15s;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 24px 0 4px;
+}
+
+.intro {
+  text-align: center;
+  color: #9a9aa2;
+  margin: 0 0 24px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 0 24px 48px;
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  margin-top: 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  color: #9a9aa2;
+}
+
+.moon-stack {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  perspective: 600px;
+}
+
+.moon-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+}
+
+/* iris-fade: clip-path grows/shrinks on both ends, but opacity only fades on the
+   way out (exit) — entry snaps straight to fully opaque so growth reads clean,
+   while the outgoing phase fades away fast as it shrinks to hide the clip edge.
+   --clip-duration and --fade-duration are set per demo card to test timings. */
+.style-iris-fade {
+  --clip-duration: 0.9s;
+  --fade-duration: 0.2s;
+}
+.style-iris-fade .moon-frame {
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transition: opacity var(--fade-duration) ease-in-out, clip-path var(--clip-duration) ease-in-out;
+}
+.style-iris-fade .moon-frame.active {
+  opacity: 1;
+  clip-path: circle(75% at 50% 50%);
+  transition: opacity 0s, clip-path var(--clip-duration) ease-in-out;
+}
+
+/* iris-fade-entrance: opposite of iris-fade — entrance fades in, but exit
+   snaps straight to invisible (only the clip-path shrink is visible on exit). */
+.style-iris-fade-entrance {
+  --clip-duration: 0.9s;
+  --fade-duration: 0.2s;
+}
+.style-iris-fade-entrance .moon-frame {
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transition: opacity 0s, clip-path var(--clip-duration) ease-in-out;
+}
+.style-iris-fade-entrance .moon-frame.active {
+  opacity: 1;
+  clip-path: circle(75% at 50% 50%);
+  transition: opacity var(--fade-duration) ease-in-out, clip-path var(--clip-duration) ease-in-out;
+}
+
+/* iris-fade-both: same clip-path growth, but opacity fades on BOTH entrance
+   and exit (symmetric), instead of snapping straight to opaque on entry. */
+.style-iris-fade-both {
+  --clip-duration: 0.9s;
+  --fade-duration: 0.2s;
+}
+.style-iris-fade-both .moon-frame {
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transition: opacity var(--fade-duration) ease-in-out, clip-path var(--clip-duration) ease-in-out;
+}
+.style-iris-fade-both .moon-frame.active {
+  opacity: 1;
+  clip-path: circle(75% at 50% 50%);
+  transition: opacity var(--fade-duration) ease-in-out, clip-path var(--clip-duration) ease-in-out;
+}
+
+/* iris-grow: opacity and clip-path share one duration, and the fade uses a
+   slow-start/fast-finish curve. Opacity stays near 0 while the clip circle
+   is still tiny, hiding it — the frame only becomes visible once it's
+   already mostly grown, so it reads as materializing rather than a dot
+   expanding. --fade-curve controls how late/abrupt the reveal feels. */
+.style-iris-grow {
+  --duration: 0.6s;
+  --fade-curve: cubic-bezier(0.5, 0, 0.75, 0); /* easeInQuart */
+}
+.style-iris-grow .moon-frame {
+  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
+  transition: opacity 0s, clip-path var(--duration) ease-in-out;
+}
+.style-iris-grow .moon-frame.active {
+  opacity: 1;
+  clip-path: circle(75% at 50% 50%);
+  transition: opacity var(--duration) var(--fade-curve), clip-path var(--duration) ease-in-out;
+}
+

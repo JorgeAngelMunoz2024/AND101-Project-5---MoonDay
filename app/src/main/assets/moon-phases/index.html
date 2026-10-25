@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Moon Phases - Iris Fade Timing Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Moon phase loop &mdash; iris-fade timing test</h1>
+  <p class="intro">Same iris-fade animation, different clip-grow / exit-fade speeds. Tell me the label under the one that looks best.</p>
+  <div class="gallery">
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.1s;"></div>
+      <p class="label">clip 0.5s / fade 0.1s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.3s;"></div>
+      <p class="label">clip 0.5s / fade 0.3s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.9s; --fade-duration: 0.1s;"></div>
+      <p class="label">clip 0.9s / fade 0.1s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.9s; --fade-duration: 0.2s;"></div>
+      <p class="label">clip 0.9s / fade 0.2s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.9s; --fade-duration: 0.4s;"></div>
+      <p class="label">clip 0.9s / fade 0.4s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 1.3s; --fade-duration: 0.2s;"></div>
+      <p class="label">clip 1.3s / fade 0.2s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 1.3s; --fade-duration: 0.4s;"></div>
+      <p class="label">clip 1.3s / fade 0.4s</p>
+    </div>
+
+  </div>
+
+  <h1>Fade on entrance + exit</h1>
+  <p class="intro">Same clip-path growth, but opacity now fades in on entrance too, not just on exit.</p>
+  <div class="gallery">
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.1s;"></div>
+      <p class="label">clip 0.5s / fade 0.1s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.3s;"></div>
+      <p class="label">clip 0.5s / fade 0.3s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.9s; --fade-duration: 0.1s;"></div>
+      <p class="label">clip 0.9s / fade 0.1s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.9s; --fade-duration: 0.2s;"></div>
+      <p class="label">clip 0.9s / fade 0.2s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.9s; --fade-duration: 0.4s;"></div>
+      <p class="label">clip 0.9s / fade 0.4s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 1.3s; --fade-duration: 0.2s;"></div>
+      <p class="label">clip 1.3s / fade 0.2s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 1.3s; --fade-duration: 0.4s;"></div>
+      <p class="label">clip 1.3s / fade 0.4s</p>
+    </div>
+
+  </div>
+
+  <h1>Clip 0.5s, fade timing sweep</h1>
+  <p class="intro">Clip-path fixed at 0.5s (entrance + exit fade), only the fade duration changes.</p>
+  <div class="gallery">
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.05s;"></div>
+      <p class="label">clip 0.5s / fade 0.05s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.1s;"></div>
+      <p class="label">clip 0.5s / fade 0.1s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.15s;"></div>
+      <p class="label">clip 0.5s / fade 0.15s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.2s;"></div>
+      <p class="label">clip 0.5s / fade 0.2s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.3s;"></div>
+      <p class="label">clip 0.5s / fade 0.3s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.4s;"></div>
+      <p class="label">clip 0.5s / fade 0.4s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-both" style="--clip-duration: 0.5s; --fade-duration: 0.5s;"></div>
+      <p class="label">clip 0.5s / fade 0.5s</p>
+    </div>
+
+  </div>
+
+  <h1>Clip 0.5s, fade on entrance only</h1>
+  <p class="intro">Entrance fades in over the given duration; exit snaps instantly (only clip-path shrinks).</p>
+  <div class="gallery">
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-entrance" style="--clip-duration: 0.5s; --fade-duration: 0.1s;"></div>
+      <p class="label">clip 0.5s / fade 0.1s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-entrance" style="--clip-duration: 0.5s; --fade-duration: 0.2s;"></div>
+      <p class="label">clip 0.5s / fade 0.2s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-entrance" style="--clip-duration: 0.5s; --fade-duration: 0.3s;"></div>
+      <p class="label">clip 0.5s / fade 0.3s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-entrance" style="--clip-duration: 0.5s; --fade-duration: 0.5s;"></div>
+      <p class="label">clip 0.5s / fade 0.5s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-entrance" style="--clip-duration: 0.5s; --fade-duration: 0.7s;"></div>
+      <p class="label">clip 0.5s / fade 0.7s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-entrance" style="--clip-duration: 0.5s; --fade-duration: 0.85s;"></div>
+      <p class="label">clip 0.5s / fade 0.85s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade-entrance" style="--clip-duration: 0.5s; --fade-duration: 1s;"></div>
+      <p class="label">clip 0.5s / fade 1s</p>
+    </div>
+
+  </div>
+
+  <h1>Clip 0.5s, fade on exit only</h1>
+  <p class="intro">Entrance snaps instantly to opaque; exit fades out over the given duration.</p>
+  <div class="gallery">
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.1s;"></div>
+      <p class="label">clip 0.5s / fade 0.1s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.2s;"></div>
+      <p class="label">clip 0.5s / fade 0.2s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.3s;"></div>
+      <p class="label">clip 0.5s / fade 0.3s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.5s;"></div>
+      <p class="label">clip 0.5s / fade 0.5s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.7s;"></div>
+      <p class="label">clip 0.5s / fade 0.7s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 0.85s;"></div>
+      <p class="label">clip 0.5s / fade 0.85s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-fade" style="--clip-duration: 0.5s; --fade-duration: 1s;"></div>
+      <p class="label">clip 0.5s / fade 1s</p>
+    </div>
+
+  </div>
+
+  <h1>Grow-in entrance (ease-in fade hides the tiny clip-path seed)</h1>
+  <p class="intro">Opacity and clip-path share the same duration; the fade uses a slow-start/fast-finish curve so the tiny growing circle stays invisible until it's already mostly grown. Curves get more "hold-then-snap" left to right.</p>
+  <div class="gallery">
+
+    <div class="demo">
+      <div class="moon-stack style-iris-grow" style="--duration: 0.6s; --fade-curve: cubic-bezier(.12,0,.39,0);"></div>
+      <p class="label">easeInSine, 0.6s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-grow" style="--duration: 0.6s; --fade-curve: cubic-bezier(.32,0,.67,0);"></div>
+      <p class="label">easeInCubic, 0.6s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-grow" style="--duration: 0.6s; --fade-curve: cubic-bezier(.5,0,.75,0);"></div>
+      <p class="label">easeInQuart, 0.6s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-grow" style="--duration: 0.6s; --fade-curve: cubic-bezier(.7,0,.84,0);"></div>
+      <p class="label">easeInExpo, 0.6s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-grow" style="--duration: 0.9s; --fade-curve: cubic-bezier(.5,0,.75,0);"></div>
+      <p class="label">easeInQuart, 0.9s</p>
+    </div>
+
+    <div class="demo">
+      <div class="moon-stack style-iris-grow" style="--duration: 0.9s; --fade-curve: cubic-bezier(.7,0,.84,0);"></div>
+      <p class="label">easeInExpo, 0.9s</p>
+    </div>
+
+  </div>
+  <script src="animation.js"></script>
+</body>
+</html>
